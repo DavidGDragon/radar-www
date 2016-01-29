@@ -18,7 +18,6 @@ build:
   pre_ci_boot:
 
   ci:
-    - ps -eax
     - printenv
     - ls -al
 
