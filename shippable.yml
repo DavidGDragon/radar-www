@@ -14,3 +14,46 @@ install:
 notifications:
     on_success: always
     on_failure: always
+
+# Language setting
+language: node_js
+
+# Version number
+node_js:
+  - 0.12
+
+env:
+  global:
+    - FOO=FUBU
+    - FO1=BUBU
+    - BOO=GUBU
+
+build:
+  pre_ci:
+#   - docker build -t=davidgdragon/radar-www .
+   
+  pre_ci_boot:
+
+  ci:
+    - ps -eax
+    - printenv
+    - ls -al
+
+  post_ci:
+#     - docker push davidgdragon/radar-www
+
+  smoke_test:
+    - sudo ls /
+
+deploy:
+  pre_build:
+    - ls
+    - ls -al
+
+integrations:
+  hub:
+    - integrationName: Real Docker
+      type: docker
+      branches:
+        only:
+          - master
