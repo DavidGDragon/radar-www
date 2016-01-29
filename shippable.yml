@@ -32,4 +32,12 @@ deploy:
     - ls
     - ls -al
 
+integrations:
+  hub:
+    - integrationName: realdockerdavid
+      type: docker
+      branches:
+        only:
+          - master
+          
 
