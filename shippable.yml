@@ -34,7 +34,7 @@ deploy:
 
 integrations:
   hub:
-    - integrationName: realdockerdavid
+    - integrationName: realdocker
       type: Docker
       branches:
         only:
