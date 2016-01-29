@@ -52,7 +52,7 @@ deploy:
 
 integrations:
   hub:
-    - integrationName: Real Docker
+    - integrationName: Real_Docker
       type: docker
       branches:
         only:
